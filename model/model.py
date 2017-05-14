@@ -55,7 +55,7 @@ class VAELSTM():
 		# cell = tf.nn.rnn_cell.MultiRNNCell([cell] * self.args.num_layers, state_is_tuple=True)
 
 		self.output_rnn, self.rnn_encoder_state = tf.nn.rnn(cell, encoder_inputs_split, dtype=tf.float32)
-		print(self.rnn_encoder_state)
+		# print(self.rnn_encoder_state)
 		XT_new = tf.transpose(self.input_seq, [1, 0])
 		XT_new_split = tf.split(0, self.args.num_steps, XT_new)
 
